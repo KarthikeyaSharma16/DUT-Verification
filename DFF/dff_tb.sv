@@ -13,12 +13,12 @@ class transaction;
     //Function to create a copy of the transaction class signals.
     function transaction copy();
         copy = new();
-        copy.din = din.copy;
-        copy.dout = dout.copy;
+        copy.din = this.din;
+        copy.dout = this.dout;
     endfunction
-
+  
     //Function to display the transaction class signals
-    function display(input string s);
+    function void display(input string s);
         $display("[%s] : din = %0b, dout = %0b", s, din, dout);
     endfunction
 
@@ -55,7 +55,7 @@ class generator;
         t = new();
     endfunction
 
-    task run()
+  task run();
         repeat(count) begin
             assert (t.randomize()) else $display("[GEN] : Stimuli Generation Failed!");
             mbx.put(t.copy);
@@ -71,7 +71,7 @@ endclass
 class driver;
 
     //Declaring an object of the interface.
-    virtual interface vif;
+    virtual dff_if vif;
 
     //Declaring an object of the transaction class.
     transaction t;
@@ -95,24 +95,19 @@ class driver;
         forever begin
             mbx.get(t);
             vif.din <= t.din;
-            @posedge(vif.clk);
+            @(posedge vif.clk);
             t.display("DRV");
             vif.din <= 1'b0;
-            @posedge(vif.clk);
+          	@(posedge vif.clk);
         end
     endtask
 
 endclass
 
-interface dff_if;
-    logic din, clk, rst;
-    logic dout;
-endinterface
-
 class monitor;
     transaction t;
     mailbox #(transaction) mbx;
-    virtual interface vif;
+    virtual dff_if vif;
 
     function new(mailbox #(transaction) mbx);
         this.mbx = mbx;
@@ -124,6 +119,7 @@ class monitor;
         forever begin
             repeat(2) @(posedge vif.clk);
             t.dout <= vif.dout;
+            t.din <= vif.din;
             mbx.put(t);
             t.display("MON");
         end
@@ -175,10 +171,10 @@ class environment;
     
     virtual dff_if vif;
 
-    function new(virtual dff_if vif)
+  function new(virtual dff_if vif);
         //Initializing all the mailboxes.
         gdmbx = new();
-        msmbx = new();
+      	msmbx = new();
         mbxref = new();
 
         //Initializing all the classes
@@ -187,10 +183,12 @@ class environment;
         mon = new(msmbx);
         sco = new(msmbx, mbxref);
 
+        //connecting the virtual interfaces
         this.vif = vif;
         drv.vif = this.vif;
         mon.vif = this.vif;
 
+        //Linking the event signals.
         gen.next = next;
         sco.next = next;
 
