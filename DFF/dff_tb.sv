@@ -19,7 +19,7 @@ class transaction;
   
     //Function to display the transaction class signals
     function void display(input string s);
-        $display("[%s] : din = %0b, dout = %0b", s, din, dout);
+        $display("[%0s] : din = %0b, dout = %0b", s, din, dout);
     endfunction
 
 endclass
@@ -57,7 +57,7 @@ class generator;
 
   task run();
         repeat(count) begin
-            assert (t.randomize()) else $display("[GEN] : Stimuli Generation Failed!");
+            assert (t.randomize()) else $error("[GEN] : Stimuli Generation Failed!");
             mbx.put(t.copy);
             mbxref.put(t.copy);
             t.display("GEN");
@@ -97,8 +97,6 @@ class driver;
             vif.din <= t.din;
             @(posedge vif.clk);
             t.display("DRV");
-            vif.din <= 1'b0;
-          	@(posedge vif.clk);
         end
     endtask
 
@@ -111,15 +109,14 @@ class monitor;
 
     function new(mailbox #(transaction) mbx);
         this.mbx = mbx;
-        t = new();
     endfunction
 
     //Wait for 2 clock signals and receive the data.
     task run();
+      t = new();
         forever begin
             repeat(2) @(posedge vif.clk);
-            t.dout <= vif.dout;
-            t.din <= vif.din;
+            t.dout = vif.dout;
             mbx.put(t);
             t.display("MON");
         end
@@ -143,7 +140,9 @@ class scoreboard;
         forever begin
             mbx.get(t);
             mbxref.get(tref);
-            if (tref.din == t.dout) begin
+            t.display("SCO");
+            tref.display("REF");
+            if (t.dout == tref.din) begin
                 $display("[SCO] : Data matched!");
             end 
             else begin
@@ -187,7 +186,7 @@ class environment;
         this.vif = vif;
         drv.vif = this.vif;
         mon.vif = this.vif;
-
+    
         //Linking the event signals.
         gen.next = next;
         sco.next = next;
