@@ -1,0 +1,297 @@
+[2024-05-31 22:45:57 UTC] vlib work && vlog '-timescale' '1ns/1ns' design.sv testbench.sv  && vsim -c -do "vsim +access+r; run -all; exit"  
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = /home/runner/work/work.lib
+MESSAGE "Unit top modules: top_tb."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2023.04.112.8911 built for Linux64 on May 12, 2023.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2023 Aldec, Inc. All rights reserved.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 5 (71.43%) other processes in SLP
+# SLP: 6 (1.58%) signals in SLP and 22 (5.79%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5599 kB (elbread=459 elab2=4974 kernel=166 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: [DRV] : Starting Reset..
+# KERNEL: [DRV] : Reset Done!
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 10011100, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 10011100, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 10011100, full = 0, empty = 0, dout = 0
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 10011100, full = 0, empty = 0, dout = 0
+# KERNEL: [SCO] : Data stored in Queue : 10011100
+# KERNEL: [SCO] : List  - 156
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 10001011, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 10001011, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 10001011, full = 0, empty = 0, dout = 10011100
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 10001011, full = 0, empty = 0, dout = 10011100
+# KERNEL: [SCO] : Data popped - 156
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 10100000, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 10100000, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 10100000, full = 0, empty = 1, dout = 10011100
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 10100000, full = 0, empty = 1, dout = 10011100
+# KERNEL: [SCO] : FIFO empty!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 11111100, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 11111100, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 11111100, full = 0, empty = 0, dout = 10011100
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 11111100, full = 0, empty = 0, dout = 10011100
+# KERNEL: [SCO] : Data stored in Queue : 11111100
+# KERNEL: [SCO] : List  - 252
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 101110, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 101110, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 101110, full = 0, empty = 0, dout = 10011100
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 101110, full = 0, empty = 0, dout = 10011100
+# KERNEL: [SCO] : Data stored in Queue : 101110
+# KERNEL: [SCO] : List  - 46 252
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 11111010, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 11111010, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 11111010, full = 0, empty = 0, dout = 11111100
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 11111010, full = 0, empty = 0, dout = 11111100
+# KERNEL: [SCO] : Data popped - 252
+# KERNEL: [SCO] : Updated List  - 46
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 10000001, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 10000001, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 10000001, full = 0, empty = 0, dout = 11111100
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 10000001, full = 0, empty = 0, dout = 11111100
+# KERNEL: [SCO] : Data stored in Queue : 10000001
+# KERNEL: [SCO] : List  - 129 46
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 11111001, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 11111001, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 11111001, full = 0, empty = 0, dout = 101110
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 11111001, full = 0, empty = 0, dout = 101110
+# KERNEL: [SCO] : Data popped - 46
+# KERNEL: [SCO] : Updated List  - 129
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 10100111, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 10100111, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 10100111, full = 0, empty = 0, dout = 101110
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 10100111, full = 0, empty = 0, dout = 101110
+# KERNEL: [SCO] : Data stored in Queue : 10100111
+# KERNEL: [SCO] : List  - 167 129
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 10111111, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 10111111, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 10111111, full = 0, empty = 0, dout = 10000001
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 10111111, full = 0, empty = 0, dout = 10000001
+# KERNEL: [SCO] : Data popped - 129
+# KERNEL: [SCO] : Updated List  - 167
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 11110000, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 11110000, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 11110000, full = 0, empty = 0, dout = 10000001
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 11110000, full = 0, empty = 0, dout = 10000001
+# KERNEL: [SCO] : Data stored in Queue : 11110000
+# KERNEL: [SCO] : List  - 240 167
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 100001, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 100001, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 100001, full = 0, empty = 0, dout = 10100111
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 100001, full = 0, empty = 0, dout = 10100111
+# KERNEL: [SCO] : Data popped - 167
+# KERNEL: [SCO] : Updated List  - 240
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 1101101, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 1101101, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 1101101, full = 0, empty = 0, dout = 11110000
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 1101101, full = 0, empty = 0, dout = 11110000
+# KERNEL: [SCO] : Data popped - 240
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 0, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 0, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 0, full = 0, empty = 0, dout = 11110000
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 0, full = 0, empty = 0, dout = 11110000
+# KERNEL: [SCO] : Data stored in Queue : 0
+# KERNEL: [SCO] : List  - 0
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 10001100, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 10001100, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 10001100, full = 0, empty = 0, dout = 11110000
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 10001100, full = 0, empty = 0, dout = 11110000
+# KERNEL: [SCO] : Data stored in Queue : 10001100
+# KERNEL: [SCO] : List  - 140 0
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 10011111, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 10011111, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 10011111, full = 0, empty = 0, dout = 0
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 10011111, full = 0, empty = 0, dout = 0
+# KERNEL: [SCO] : Data popped - 0
+# KERNEL: [SCO] : Updated List  - 140
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 11000011, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 11000011, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 11000011, full = 0, empty = 0, dout = 10001100
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 11000011, full = 0, empty = 0, dout = 10001100
+# KERNEL: [SCO] : Data popped - 140
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 110001, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 110001, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 110001, full = 0, empty = 0, dout = 10001100
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 110001, full = 0, empty = 0, dout = 10001100
+# KERNEL: [SCO] : Data stored in Queue : 110001
+# KERNEL: [SCO] : List  - 49
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 1010111, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 1010111, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 1010111, full = 0, empty = 0, dout = 110001
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 1010111, full = 0, empty = 0, dout = 110001
+# KERNEL: [SCO] : Data popped - 49
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 11100000, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 11100000, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 11100000, full = 0, empty = 0, dout = 110001
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 11100000, full = 0, empty = 0, dout = 110001
+# KERNEL: [SCO] : Data stored in Queue : 11100000
+# KERNEL: [SCO] : List  - 224
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 11110100, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 11110100, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 11110100, full = 0, empty = 0, dout = 11100000
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 11110100, full = 0, empty = 0, dout = 11100000
+# KERNEL: [SCO] : Data popped - 224
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 1001010, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 1001010, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 1001010, full = 0, empty = 0, dout = 11100000
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 1001010, full = 0, empty = 0, dout = 11100000
+# KERNEL: [SCO] : Data stored in Queue : 1001010
+# KERNEL: [SCO] : List  - 74
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 110000, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 110000, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 110000, full = 0, empty = 0, dout = 1001010
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 110000, full = 0, empty = 0, dout = 1001010
+# KERNEL: [SCO] : Data popped - 74
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 11000010, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 11000010, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 11000010, full = 0, empty = 0, dout = 1001010
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 11000010, full = 0, empty = 0, dout = 1001010
+# KERNEL: [SCO] : Data stored in Queue : 11000010
+# KERNEL: [SCO] : List  - 194
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 110110, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 110110, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 110110, full = 0, empty = 0, dout = 11000010
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 110110, full = 0, empty = 0, dout = 11000010
+# KERNEL: [SCO] : Data popped - 194
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 10011000, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 10011000, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 10011000, full = 0, empty = 0, dout = 11000010
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 10011000, full = 0, empty = 0, dout = 11000010
+# KERNEL: [SCO] : Data stored in Queue : 10011000
+# KERNEL: [SCO] : List  - 152
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 10110111, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 10110111, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 10110111, full = 0, empty = 0, dout = 10011000
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 10110111, full = 0, empty = 0, dout = 10011000
+# KERNEL: [SCO] : Data popped - 152
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 11011110, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 11011110, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 11011110, full = 0, empty = 0, dout = 10011000
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 11011110, full = 0, empty = 0, dout = 10011000
+# KERNEL: [SCO] : Data stored in Queue : 11011110
+# KERNEL: [SCO] : List  - 222
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 0, rd = 1, din = 11001101, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 0, rd = 1, din = 11001101, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 0, rd = 1, din = 11001101, full = 0, empty = 0, dout = 11011110
+# KERNEL: [SCO] : wr = 0, rd = 1, din = 11001101, full = 0, empty = 0, dout = 11011110
+# KERNEL: [SCO] : Data popped - 222
+# KERNEL: [SCO] : Updated List  - 
+# KERNEL: [SCO] : Data Match!
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# KERNEL: [GEN] : wr = 1, rd = 0, din = 1110100, full = 0, empty = 0, dout = 0
+# KERNEL: [DRV] : wr = 1, rd = 0, din = 1110100, full = 0, empty = 0, dout = 0
+# KERNEL: [MON] : wr = 1, rd = 0, din = 1110100, full = 0, empty = 0, dout = 11011110
+# KERNEL: [SCO] : wr = 1, rd = 0, din = 1110100, full = 0, empty = 0, dout = 11011110
+# KERNEL: [SCO] : Data stored in Queue : 1110100
+# KERNEL: [SCO] : List  - 116
+# KERNEL: -----------------------------------------------------
+# KERNEL: 
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (240): $finish called.
+# KERNEL: Time: 1310 ns,  Iteration: 1,  Instance: /top_tb,  Process: @INITIAL#265_2@.
+# KERNEL: stopped at time: 1310 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Done
