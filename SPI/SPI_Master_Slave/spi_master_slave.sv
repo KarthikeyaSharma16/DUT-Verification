@@ -42,7 +42,6 @@ module spi_master(input clk, rst, new_data, [11:0] din, output reg cs, mosi, scl
                     if (new_data == 1'b1) begin
                         state <= send;
                         temp <= din;
-                      $display("temp = %0d", temp);
                         cs <= 1'b0;
                     end
                     else begin
@@ -78,7 +77,7 @@ module spi_slave (input sclk, mosi, cs, output [11:0] dout, output reg done);
     always@(posedge sclk) begin
         case (state)
             detect_start: begin
-                if (cs == 1'b1) begin
+              if (cs == 1'b0) begin
                     state <= tx_data;
                 end
                 else begin
@@ -98,18 +97,22 @@ module spi_slave (input sclk, mosi, cs, output [11:0] dout, output reg done);
                 end  
             end
 
-            default: state <= detect_start;
-
-        endcase    
-
-        assign dout = temp;
+        endcase 
 
     end
+  
+  	assign dout = temp;
 
 endmodule
 
-module top(input clk, rst, new_data, [11:0] din, output [11:0] dout, done);
+module spi_top(input clk, rst, new_data, [11:0] din, output [11:0] dout, done);
     wire sclk, cs, mosi;
     spi_master m1 (clk, rst, new_data, din, cs, mosi, sclk);
     spi_slave s1 (sclk, mosi, cs, dout, done);
 endmodule
+
+interface spi_if;
+    logic clk, rst, new_data, done, sclk;
+  	logic [11:0] din;
+  	logic [11:0] dout;
+endinterface
